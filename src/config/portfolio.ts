@@ -1,0 +1,241 @@
+// ============================================================
+// PORTFOLIO CONFIG — Edit this file to customize everything!
+// ============================================================
+
+export const portfolio = {
+  // ----------------------------------------------------------
+  // Personal Info
+  // ----------------------------------------------------------
+  name: "Balya Ahmad Waffa",
+  initials: "BAW",
+  role: "Frontend Developer",
+  location: "Blitar, Indonesia",
+
+  bio: "Frontend Developer focused on building responsive, clean, and user-friendly web applications with React, Next.js, TypeScript, and Tailwind CSS. I enjoy turning UI designs into functional web experiences and continuously improving my development skills.",
+
+  shortBio:
+    "Frontend Developer based in Blitar, Indonesia, focused on building clean and responsive web experiences.",
+
+  avatar: "/avatar.png",
+  available: true,
+
+  // ----------------------------------------------------------
+  // Contact & Social
+  // ----------------------------------------------------------
+  email: "balyaahmad133@gmail.com",
+  github: "https://github.com/balyahmd",
+  linkedin: "https://linkedin.com/in/balyahmd",
+  instagram: "",
+
+  // ----------------------------------------------------------
+  // Skills
+  // ----------------------------------------------------------
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "MySQL",
+    "Sequelize",
+    "REST APIs",
+    "Git",
+    "Figma",
+    "Canva",
+  ],
+
+  // Tech stack logos shown in the animated strip
+  techStack: [
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "JavaScript" },
+    { name: "TypeScript" },
+    { name: "React" },
+    { name: "Next.js" },
+    { name: "Tailwind CSS" },
+    { name: "Bootstrap" },
+    { name: "Node.js" },
+    { name: "Express.js" },
+    { name: "PostgreSQL" },
+    { name: "MySQL" },
+    { name: "Git" },
+    { name: "Figma" },
+    { name: "Vercel" },
+  ],
+
+  // ----------------------------------------------------------
+  // Projects
+  // ----------------------------------------------------------
+  projects: [
+    {
+      id: 1,
+      title: "Virtual Tour Website SDN Gadungan 02",
+      description:
+        "A school profile website integrated with a 360° virtual tour that allows visitors to explore the school environment digitally. Built with React, Tailwind CSS, React-Pannellum, Express.js, and PostgreSQL.",
+
+      image: "/project-2.png",
+      tech: [
+        "React",
+        "Tailwind CSS",
+        "React-Pannellum",
+        "Express.js",
+        "PostgreSQL",
+        "JWT",
+      ],
+
+      github: "",
+      live: "",
+
+      category: "Web",
+      featured: true,
+    },
+
+    {
+      id: 2,
+      title: "Video Belajar",
+      description:
+        "A learning platform interface for browsing and managing online courses. The application provides course listing, search, category filtering, pagination, and course management features with a responsive modern interface.",
+
+      image: "/project-3.png",
+      tech: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "REST API",
+        "Vercel",
+      ],
+
+      github: "https://github.com/balyahmd",
+      live: "",
+
+      category: "Web",
+      featured: true,
+    },
+
+    {
+      id: 4,
+      title: "Personal Portfolio Website",
+      description:
+        "A personal developer portfolio showcasing projects, technical skills, experience, and education with a responsive and modern interface.",
+
+      image: "/project-1.png",
+      tech: [
+        " React.js",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+
+      github: "https://github.com/balyahmd",
+      live: "",
+
+      category: "Web",
+      featured: false,
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // Experience
+  // ----------------------------------------------------------
+  experience: [
+    {
+      company: "SEAL",
+      role: "Frontend Developer Intern",
+      period: "Aug 2025 — Dec 2025",
+      location: "Remote",
+
+      description:
+        "Developed responsive web interfaces based on Figma designs using React.js, TypeScript, and Tailwind CSS. Built reusable components and focused on creating clean, consistent, and user-friendly interfaces.",
+
+      tech: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Figma",
+      ],
+    },
+
+    {
+      company: "JanjiNgoding.Id",
+      role: "Frontend Developer",
+      period: "Feb 2025 — Jun 2025",
+      location: "Remote",
+
+      description:
+        "Developed and maintained frontend features for a POS application, including the order management feature. Worked with React, TypeScript, and Tailwind CSS while integrating frontend interfaces with backend APIs.",
+
+      tech: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express.js",
+        "PostgreSQL",
+      ],
+    },
+
+    {
+      company: "Pertakina",
+      role: "Web Developer",
+      period: "Jan 2024 — Feb 2024",
+      location: "Indonesia",
+
+      description:
+        "Developed and improved web application interfaces for a language learning platform. Worked on dashboard interfaces, frontend improvements, and code refactoring using PHP, Bootstrap, and MySQL.",
+
+      tech: [
+        "PHP",
+        "Bootstrap",
+        "MySQL",
+        "HTML",
+        "CSS",
+      ],
+    },
+
+    {
+      company: "PT Lintas Jaringan Nusantara",
+      role: "Operator OLT Jaringan",
+      period: "Feb 2026 — Sep 2026",
+      location: "Blitar, Indonesia",
+
+      description:
+        "Monitored and maintained FTTH network infrastructure, including OLT, ONT, and ONU activation and monitoring. Performed troubleshooting and coordinated with field technicians to resolve network issues and service outages.",
+
+      tech: [
+        "OLT Web Management",
+        "MikroTik WinBox",
+        "FTTH",
+        "Network Monitoring",
+      ],
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // Education
+  // ----------------------------------------------------------
+  education: [
+    {
+      institution: "Universitas Islam Balitar",
+      degree: "S1 Teknik Informatika",
+
+      period: "2021 — 2025",
+
+      description:
+        "Graduated with a GPA of 3.59/4.00. Focused on software engineering, web development, frontend development, and information technology. Final project focused on developing a school website integrated with a 360° virtual tour.",
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // Project filter categories
+  // ----------------------------------------------------------
+  categories: ["All", "Web"],
+} as const;
+
+export type Project = (typeof portfolio.projects)[number];
+export type Experience = (typeof portfolio.experience)[number];
+export type Education = (typeof portfolio.education)[number];
