@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { portfolio } from "@/src/config/portfolio";
 import { Button } from "@/src/components/ui/button";
 import Link from "next/link";
+import { RotatingText } from "@/src/components/home/RotateText";
 
 export function Bio() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       <div className="flex flex-col gap-12 md:flex-row md:items-center md:gap-20">
-        {/* Photo */}
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -20,7 +20,7 @@ export function Bio() {
         >
           <div className="relative mx-auto h-56 w-56 sm:h-64 sm:w-64 overflow-hidden rounded-2xl bg-secondary shadow-md">
             <Image
-              src={portfolio.avatar}
+              src={portfolio.profile}
               alt={portfolio.name}
               fill
               className="object-cover"
@@ -29,7 +29,6 @@ export function Bio() {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
-            {/* Initials fallback */}
             <div className="flex h-full w-full items-center justify-center text-5xl font-bold text-muted-foreground/40">
               {portfolio.initials}
             </div>
@@ -50,7 +49,7 @@ export function Bio() {
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {portfolio.name}
             </h1>
-            <p className="mt-1 text-lg text-muted-foreground">{portfolio.role}</p>
+            <p className="mt-1 text-lg text-muted-foreground"> <RotatingText words={portfolio.roles} /></p>
           </div>
 
           <p className="text-muted-foreground leading-relaxed">{portfolio.bio}</p>

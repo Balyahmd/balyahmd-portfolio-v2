@@ -9,6 +9,7 @@ export const portfolio = {
   name: "Balya Ahmad Waffa",
   initials: "BAW",
   role: "Frontend Developer",
+  roles: ["Frontend Developer", "Aspiring Fullstack Developer"],
   location: "Blitar, Indonesia",
 
   bio: "Frontend Developer focused on building responsive, clean, and user-friendly web applications with React, Next.js, TypeScript, and Tailwind CSS. I enjoy turning UI designs into functional web experiences and continuously improving my development skills.",
@@ -17,6 +18,7 @@ export const portfolio = {
     "Frontend Developer based in Blitar, Indonesia, focused on building clean and responsive web experiences.",
 
   avatar: "/avatar.png",
+  profile: "/foto-profile.jpg",
   available: true,
 
   // ----------------------------------------------------------
@@ -89,8 +91,8 @@ export const portfolio = {
         "JWT",
       ],
 
-      github: "",
-      live: "",
+      github: "https://sdngadungan02-blitar.vercel.app/",
+      live: "https://sdngadungan02-blitar.vercel.app/",
 
       category: "Web",
       featured: true,
@@ -112,8 +114,8 @@ export const portfolio = {
         "Vercel",
       ],
 
-      github: "https://github.com/balyahmd",
-      live: "",
+      github: "https://github.com/Balyahmd/harisenin-bootcamp-fe-missions",
+      live: "https://video-belajar-mission.vercel.app/",
 
       category: "Web",
       featured: true,
@@ -126,14 +128,10 @@ export const portfolio = {
         "A personal developer portfolio showcasing projects, technical skills, experience, and education with a responsive and modern interface.",
 
       image: "/project-1.png",
-      tech: [
-        " React.js",
-        "TypeScript",
-        "Tailwind CSS",
-      ],
+      tech: [" React.js", "TypeScript", "Tailwind CSS"],
 
-      github: "https://github.com/balyahmd",
-      live: "",
+      github: "https://balyahmd-portfolio.vercel.app/",
+      live: "https://balyahmd-portfolio.vercel.app/",
 
       category: "Web",
       featured: false,
@@ -153,12 +151,7 @@ export const portfolio = {
       description:
         "Developed responsive web interfaces based on Figma designs using React.js, TypeScript, and Tailwind CSS. Built reusable components and focused on creating clean, consistent, and user-friendly interfaces.",
 
-      tech: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Figma",
-      ],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
     },
 
     {
@@ -170,13 +163,7 @@ export const portfolio = {
       description:
         "Developed and maintained frontend features for a POS application, including the order management feature. Worked with React, TypeScript, and Tailwind CSS while integrating frontend interfaces with backend APIs.",
 
-      tech: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Express.js",
-        "PostgreSQL",
-      ],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Express.js", "PostgreSQL"],
     },
 
     {
@@ -188,13 +175,7 @@ export const portfolio = {
       description:
         "Developed and improved web application interfaces for a language learning platform. Worked on dashboard interfaces, frontend improvements, and code refactoring using PHP, Bootstrap, and MySQL.",
 
-      tech: [
-        "PHP",
-        "Bootstrap",
-        "MySQL",
-        "HTML",
-        "CSS",
-      ],
+      tech: ["PHP", "Bootstrap", "MySQL", "HTML", "CSS"],
     },
 
     {

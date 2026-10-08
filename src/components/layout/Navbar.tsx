@@ -7,7 +7,6 @@ import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/src/components/ui/button";
-import { portfolio } from "@/src/config/portfolio";
 import { cn } from "@/src/lib/utils";
 
 const navLinks = [
@@ -47,7 +46,7 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2 font-semibold text-foreground hover:opacity-80 transition-opacity"
         >    
-          <span className="sm:inline text-2xl font-semibold">
+          <span className="sm:inline text-2xl font-bold">
             .balyahmd
           </span>
         </Link>

@@ -7,6 +7,7 @@ import { motion, type Variants } from "framer-motion";
 import { Button } from "@/src/components/ui/button";
 import { Badge } from "@/src/components/ui/badge";
 import { portfolio } from "@/src/config/portfolio";
+import { RotatingText } from "@/src/components/home/RotateText";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -55,15 +56,15 @@ export function Hero() {
           </motion.h1>
 
           {/* Role */}
-          <motion.p
+          <motion.div
             custom={2}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-xl font-medium text-muted-foreground"
+            className="text-lg font-medium"
           >
-            {portfolio.role}
-          </motion.p>
+            <RotatingText words={portfolio.roles} />
+          </motion.div>
 
           {/* Bio */}
           <motion.p
@@ -103,10 +104,12 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/contact">
-                <Download className="h-4 w-4" />
-                Download CV
-              </Link>
+              <Button asChild variant="outline" size="lg">
+                <a href="/CV.pdf" download="CV.pdf">
+                  <Download className="h-4 w-4" />
+                  Download CV
+                </a>
+              </Button>
             </Button>
           </motion.div>
         </div>

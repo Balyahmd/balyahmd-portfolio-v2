@@ -2,29 +2,26 @@
 
 import { motion } from "framer-motion";
 import { portfolio } from "@/src/config/portfolio";
-import { Separator } from "@/src/components/ui/separator";
 
 export function TechStack() {
-  // Duplicate the items to create a seamless infinite scroll
   const items = [...portfolio.techStack, ...portfolio.techStack];
 
   return (
-    <section className="py-16 overflow-hidden border-y border-border bg-secondary/30">
-      <div className="mx-auto max-w-6xl px-6 mb-8">
+    <section className="overflow-hidden border-y border-border bg-secondary/40 py-14">
+      <div className="mx-auto mb-8 max-w-6xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground"
+          transition={{ duration: 0.5 }}
+          className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
         >
           Technologies I work with
         </motion.p>
       </div>
 
-      {/* Scrolling strip */}
-      <div className="relative flex overflow-hidden [mask-:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-        <div className="animate-scroll flex gap-8 whitespace-nowrap">
+      <div className="marquee relative [mask:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+        <div className="animate-scroll flex w-max gap-3 pr-3">
           {items.map((tech, i) => (
             <TechItem key={`${tech.name}-${i}`} name={tech.name} />
           ))}
@@ -36,13 +33,9 @@ export function TechStack() {
 
 function TechItem({ name }: { name: string }) {
   return (
-    <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-lg border border-border bg-background shadow-sm text-sm font-medium text-muted-foreground hover:text-foreground transition-colors shrink-0">
-      <TechDot />
+    <div className="flex shrink-0 items-center gap-2.5 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/40 hover:text-foreground">
+      <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
       {name}
     </div>
   );
-}
-
-function TechDot() {
-  return <span className="h-1.5 w-1.5 rounded-full bg-foreground/30" />;
 }
