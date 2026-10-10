@@ -1,6 +1,52 @@
-// ============================================================
-// PORTFOLIO CONFIG — Edit this file to customize everything!
-// ============================================================
+export type Skill = {
+  name: string;
+  icon?: string;
+};
+
+export type SkillCategory = {
+  title: string;
+  skills: Skill[];
+};
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "HTML", icon: "html5" },
+      { name: "CSS", icon: "css3" },
+      { name: "JavaScript", icon: "js" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "React", icon: "react" },
+      { name: "Next.js", icon: "nextjs2" },
+      { name: "Tailwind CSS", icon: "tailwindcss" },
+      { name: "Bootstrap", icon: "bootstrap5" },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: "nodejs" },
+      { name: "Express.js", icon: "expressjs" },
+      { name: "REST APIs", icon: "postman" },
+      { name: "Sequelize", icon: "sequelize" },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "MySQL", icon: "mysql" },
+    ],
+  },
+  {
+    title: "Other",
+    skills: [
+      { name: "Git", icon: "git" },
+      { name: "Figma", icon: "figma" },
+      { name: "Vercel", icon: "vercel" },
+    ],
+  },
+];
 
 export const portfolio = {
   // ----------------------------------------------------------
@@ -32,27 +78,8 @@ export const portfolio = {
   // ----------------------------------------------------------
   // Skills
   // ----------------------------------------------------------
-  skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Node.js",
-    "Express.js",
-    "PostgreSQL",
-    "MySQL",
-    "Sequelize",
-    "REST APIs",
-    "Git",
-    "Figma",
-    "Canva",
-  ],
+  skillCategories,
 
-  // Tech stack logos shown in the animated strip
   techStack: [
     { name: "HTML" },
     { name: "CSS" },
@@ -80,7 +107,6 @@ export const portfolio = {
       title: "Virtual Tour Website SDN Gadungan 02",
       description:
         "A school profile website integrated with a 360° virtual tour that allows visitors to explore the school environment digitally. Built with React, Tailwind CSS, React-Pannellum, Express.js, and PostgreSQL.",
-
       image: "/project-2.png",
       tech: [
         "React",
@@ -90,20 +116,16 @@ export const portfolio = {
         "PostgreSQL",
         "JWT",
       ],
-
       github: "https://sdngadungan02-blitar.vercel.app/",
       live: "https://sdngadungan02-blitar.vercel.app/",
-
       category: "Web",
       featured: true,
     },
-
     {
       id: 2,
       title: "Video Belajar",
       description:
         "A learning platform interface for browsing and managing online courses. The application provides course listing, search, category filtering, pagination, and course management features with a responsive modern interface.",
-
       image: "/project-3.png",
       tech: [
         "React",
@@ -113,26 +135,20 @@ export const portfolio = {
         "REST API",
         "Vercel",
       ],
-
       github: "https://github.com/Balyahmd/harisenin-bootcamp-fe-missions",
       live: "https://video-belajar-mission.vercel.app/",
-
       category: "Web",
       featured: true,
     },
-
     {
       id: 4,
       title: "Personal Portfolio Website",
       description:
         "A personal developer portfolio showcasing projects, technical skills, experience, and education with a responsive and modern interface.",
-
       image: "/project-1.png",
-      tech: [" React.js", "TypeScript", "Tailwind CSS"],
-
+      tech: ["React.js", "TypeScript", "Tailwind CSS"],
       github: "https://balyahmd-portfolio.vercel.app/",
       live: "https://balyahmd-portfolio.vercel.app/",
-
       category: "Web",
       featured: false,
     },
@@ -147,58 +163,21 @@ export const portfolio = {
       role: "Frontend Developer Intern",
       period: "Aug 2025 — Dec 2025",
       location: "Remote",
-
       description:
         "Developed responsive web interfaces based on Figma designs using React.js, TypeScript, and Tailwind CSS. Built reusable components and focused on creating clean, consistent, and user-friendly interfaces.",
-
       tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
     },
-
     {
       company: "JanjiNgoding.Id",
       role: "Frontend Developer",
       period: "Feb 2025 — Jun 2025",
       location: "Remote",
-
       description:
         "Developed and maintained frontend features for a POS application, including the order management feature. Worked with React, TypeScript, and Tailwind CSS while integrating frontend interfaces with backend APIs.",
-
       tech: ["React", "TypeScript", "Tailwind CSS", "Express.js", "PostgreSQL"],
-    },
-
-    {
-      company: "Pertakina",
-      role: "Web Developer",
-      period: "Jan 2024 — Feb 2024",
-      location: "Indonesia",
-
-      description:
-        "Developed and improved web application interfaces for a language learning platform. Worked on dashboard interfaces, frontend improvements, and code refactoring using PHP, Bootstrap, and MySQL.",
-
-      tech: ["PHP", "Bootstrap", "MySQL", "HTML", "CSS"],
-    },
-
-    {
-      company: "PT Lintas Jaringan Nusantara",
-      role: "Operator OLT Jaringan",
-      period: "Feb 2026 — Sep 2026",
-      location: "Blitar, Indonesia",
-
-      description:
-        "Monitored and maintained FTTH network infrastructure, including OLT, ONT, and ONU activation and monitoring. Performed troubleshooting and coordinated with field technicians to resolve network issues and service outages.",
-
-      tech: [
-        "OLT Web Management",
-        "MikroTik WinBox",
-        "FTTH",
-        "Network Monitoring",
-      ],
     },
   ],
 
-  // ----------------------------------------------------------
-  // Education
-  // ----------------------------------------------------------
   education: [
     {
       institution: "Universitas Islam Balitar",
@@ -210,10 +189,6 @@ export const portfolio = {
         "Graduated with a GPA of 3.59/4.00. Focused on software engineering, web development, frontend development, and information technology. Final project focused on developing a school website integrated with a 360° virtual tour.",
     },
   ],
-
-  // ----------------------------------------------------------
-  // Project filter categories
-  // ----------------------------------------------------------
   categories: ["All", "Web"],
 } as const;
 

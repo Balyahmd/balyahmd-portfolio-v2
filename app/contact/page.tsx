@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GitBranch, Link2, X, Mail, Coffee } from "lucide-react";
+import { GitBranch, Link2,Mail} from "lucide-react";
 import { ContactForm } from "@/src/components/contact/ContactForm";
 import { portfolio } from "@/src/config/portfolio";
-import { Separator } from "@/src/components/ui/separator";
 
 export const metadata: Metadata = {
   title: `Contact — ${portfolio.name}`,

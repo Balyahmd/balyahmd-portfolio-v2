@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  LazyMotion,
+  m,
+  domAnimation,
+  AnimatePresence,
+  useReducedMotion,
+} from "framer-motion";
 import { cn } from "@/src/lib/utils";
 
 interface RotatingTextProps {
@@ -35,18 +41,20 @@ export function RotatingText({
         className,
       )}
     >
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.span
-          key={words[index]}
-          initial={reduceMotion ? { opacity: 0 } : { y: "100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={reduceMotion ? { opacity: 0 } : { y: "-100%", opacity: 0 }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-block"
-        >
-          {words[index]}
-        </motion.span>
-      </AnimatePresence>
+      <LazyMotion features={domAnimation} strict>
+        <AnimatePresence mode="wait" initial={false}>
+          <m.span
+            key={words[index]}
+            initial={reduceMotion ? { opacity: 0 } : { y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={reduceMotion ? { opacity: 0 } : { y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="inline-block"
+          >
+            {words[index]}
+          </m.span>
+        </AnimatePresence>
+      </LazyMotion>
     </span>
   );
 }

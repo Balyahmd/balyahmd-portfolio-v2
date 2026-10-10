@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import { cn } from "@/src/lib/utils";
 import { portfolio } from "@/src/config/portfolio";
 
@@ -11,7 +11,8 @@ interface FilterBarProps {
 
 export function FilterBar({ active, onChange }: FilterBarProps) {
   return (
-    <motion.div
+    <LazyMotion features={domAnimation} strict>
+       <m.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
@@ -31,6 +32,8 @@ export function FilterBar({ active, onChange }: FilterBarProps) {
           {category}
         </button>
       ))}
-    </motion.div>
+    </m.div>
+    </LazyMotion>
+   
   );
 }

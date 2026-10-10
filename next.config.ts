@@ -2,10 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-   images: {
-    // Allow external image domains here if needed
-    // e.g. remotePatterns: [{ hostname: "images.unsplash.com" }]
-    unoptimized: true, // Remove this when deploying to Vercel for optimal image handling
+   images: { formats: ["image/avif", "image/webp"] },
+   experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
 };
 

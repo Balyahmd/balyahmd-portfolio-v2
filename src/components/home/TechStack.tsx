@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import { portfolio } from "@/src/config/portfolio";
 
 export function TechStack() {
@@ -8,17 +8,19 @@ export function TechStack() {
 
   return (
     <section className="overflow-hidden border-y border-border bg-secondary/40 py-14">
-      <div className="mx-auto mb-8 max-w-6xl px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
-        >
-          Technologies I work with
-        </motion.p>
-      </div>
+      <LazyMotion features={domAnimation} strict>
+        <div className="mx-auto mb-8 max-w-6xl px-6">
+          <m.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
+          >
+            Technologies I work with
+          </m.p>
+        </div>
+      </LazyMotion>
 
       <div className="marquee relative [mask:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
         <div className="animate-scroll flex w-max gap-3 pr-3">
